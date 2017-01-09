@@ -12,6 +12,7 @@
 		97996D701E22CFF800F4E4EF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97996D6E1E22CFF800F4E4EF /* MainMenu.xib */; };
 		97996D7B1E232D4800F4E4EF /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97996D791E232D4800F4E4EF /* Preferences.swift */; };
 		97996D7C1E232D4800F4E4EF /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97996D7A1E232D4800F4E4EF /* Preferences.xib */; };
+		97996D821E233A9B00F4E4EF /* ScriptRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97996D811E233A9B00F4E4EF /* ScriptRunner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		97996D711E22CFF800F4E4EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97996D791E232D4800F4E4EF /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		97996D7A1E232D4800F4E4EF /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		97996D811E233A9B00F4E4EF /* ScriptRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptRunner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		97996D691E22CFF800F4E4EF /* FastShutdown */ = {
 			isa = PBXGroup;
 			children = (
+				97996D7E1E233A6700F4E4EF /* Util */,
 				97996D7D1E232D5400F4E4EF /* Preferences */,
 				97996D6A1E22CFF800F4E4EF /* AppDelegate.swift */,
 				97996D6C1E22CFF800F4E4EF /* Assets.xcassets */,
@@ -70,6 +73,14 @@
 				97996D7A1E232D4800F4E4EF /* Preferences.xib */,
 			);
 			name = Preferences;
+			sourceTree = "<group>";
+		};
+		97996D7E1E233A6700F4E4EF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				97996D811E233A9B00F4E4EF /* ScriptRunner.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97996D821E233A9B00F4E4EF /* ScriptRunner.swift in Sources */,
 				97996D7B1E232D4800F4E4EF /* Preferences.swift in Sources */,
 				97996D6B1E22CFF800F4E4EF /* AppDelegate.swift in Sources */,
 			);

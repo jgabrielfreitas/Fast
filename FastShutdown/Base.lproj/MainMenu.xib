@@ -33,6 +33,13 @@
                         <action selector="shutdownClicked:" target="Voe-Tx-rLC" id="2O0-bj-oKY"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Quit all apps" id="lFZ-WM-oh4">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitAllApps:" target="Voe-Tx-rLC" id="MPA-2F-V2l"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="DOo-J7-JGl"/>
                 <menuItem title="Quit" id="C2d-zD-cRy">
                     <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>

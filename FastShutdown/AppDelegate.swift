@@ -13,8 +13,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     @IBOutlet weak var statusMenu: NSMenu!
-    let statusItem  = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
-    let preferences = Preferences()
+    let statusItem   = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let preferences  = Preferences()
+    let scriptRunner = ScriptRunner()
     
     @IBOutlet weak var window: NSWindow!
     
@@ -25,11 +26,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         preferences.showWindow(nil)
     }
     
+    @IBAction func quitAllApps(_ sender: NSMenuItem) {
+        
+//        let killAllScript = "l"
+    }
+    
     @IBAction func shutdownClicked(_ sender: NSMenuItem) {
         
         let source = "tell application \"Finder\"\nshut down\nend tell"
-        let script = NSAppleScript(source: source)
-        script?.executeAndReturnError(nil)
+        scriptRunner.run(source)
     }
     
     // kill application
@@ -42,10 +47,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         statusItem.title = "Fast"
         statusItem.menu = statusMenu
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
 
 
