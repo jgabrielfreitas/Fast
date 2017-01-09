@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FastShutdown.xcodeproj">
+      location = "self:/Users/JGabrielFreitas/Documents/git/FastShutdown/Fast.xcodeproj">
    </FileRef>
 </Workspace>

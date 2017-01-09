@@ -13,15 +13,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     @IBOutlet weak var statusMenu: NSMenu!
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let statusItem  = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let preferences = Preferences()
     
     @IBOutlet weak var window: NSWindow!
     
-    @IBAction func quitClicked(_ sender: NSMenuItem) {
+    // open app preferences
+    @IBAction func openPreferences(_ sender: NSMenuItem) {
+        
+        print("opening preferences...")
+        preferences.showWindow(nil)
+    }
+    
+    @IBAction func shutdownClicked(_ sender: NSMenuItem) {
         
         let source = "tell application \"Finder\"\nshut down\nend tell"
         let script = NSAppleScript(source: source)
         script?.executeAndReturnError(nil)
+    }
+    
+    // kill application
+    @IBAction func quitClicked(_ sender: NSMenuItem) {
+        
+        NSApplication.shared().terminate(self)
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
